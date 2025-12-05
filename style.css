@@ -1,0 +1,255 @@
+/* Variables de Estilo */
+:root {
+    --color-principal: #5d4037; /* Café Oscuro / Tierra */
+    --color-secundario: #a1887f; /* Beige / Rosa Polvo */
+    --color-fondo: #f5f5f5; /* Fondo Gris Claro */
+    --color-texto: #333;
+    --fuente-titulo: 'Playfair Display', serif; /* Elegante */
+    --fuente-cuerpo: 'Roboto', sans-serif; /* Limpia */
+}
+
+/* Importar Fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    font-family: var(--fuente-cuerpo);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Contenedor Principal */
+.invitacion-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Header (Hero Section) */
+.hero {
+    background-color: var(--color-principal);
+    color: white;
+    padding: 60px 20px;
+    background-image: url('placeholder-bg.jpg'); /* Reemplaza con una imagen de fondo de pareja/flores */
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    font-family: var(--fuente-titulo);
+    font-size: 3.5em;
+    margin-bottom: 5px;
+}
+
+.hero h2 {
+    font-family: var(--fuente-titulo);
+    font-size: 2.2em;
+    margin-top: 0;
+    border-bottom: 2px solid white;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.fecha {
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.save-the-date {
+    font-size: 1.1em;
+    margin-top: 30px;
+}
+
+.save-the-date i {
+    color: var(--color-secundario); /* Puede ser un color de acento si la imagen lo permite */
+    margin: 0 5px;
+}
+
+/* Secciones Generales */
+section {
+    padding: 40px 20px;
+    border-top: 1px solid #eee;
+}
+
+section h3 {
+    font-family: var(--fuente-titulo);
+    font-size: 2em;
+    color: var(--color-principal);
+    margin-bottom: 30px;
+}
+
+/* Cuenta Regresiva (Countdown) */
+.timer-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.time-box {
+    background-color: var(--color-secundario);
+    color: white;
+    padding: 15px 10px;
+    border-radius: 8px;
+    width: 80px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.time-box span {
+    display: block;
+    font-size: 2.5em;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.time-box label {
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Detalles (Ceremonia y Recepción) */
+.detalles {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.detalle-card {
+    background-color: var(--color-fondo);
+    padding: 25px;
+    border-left: 5px solid var(--color-principal);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.detalle-card i {
+    font-size: 2em;
+    color: var(--color-principal);
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.detalle-card h4 {
+    display: inline-block;
+    font-family: var(--fuente-titulo);
+    font-size: 1.5em;
+    color: var(--color-principal);
+    margin: 0 0 10px 0;
+}
+
+.detalle-card p {
+    margin: 5px 0;
+    padding-left: 45px; /* Alineación con el texto */
+}
+
+.btn-mapa {
+    display: inline-block;
+    background-color: var(--color-secundario);
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn-mapa:hover {
+    background-color: var(--color-principal);
+}
+
+/* Confirmación (RSVP) */
+.confirmacion p {
+    margin-bottom: 20px;
+}
+
+.btn-rsvp {
+    background-color: #4CAF50; /* Un color que destaque para la acción */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 50px;
+    font-size: 1.1em;
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.4);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-rsvp i {
+    margin-right: 8px;
+}
+
+.btn-rsvp:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-principal);
+    color: white;
+    padding: 20px 0;
+}
+
+.copyright {
+    font-size: 0.8em;
+    opacity: 0.7;
+}
+
+/* Media Queries para Responsividad Móvil */
+@media (max-width: 600px) {
+    .invitacion-container {
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero h2 {
+        font-size: 1.8em;
+    }
+
+    .timer-grid {
+        gap: 8px;
+    }
+
+    .time-box {
+        width: 65px;
+        padding: 10px 5px;
+    }
+
+    .time-box span {
+        font-size: 2em;
+    }
+
+    .detalles {
+        text-align: center;
+    }
+    
+    .detalle-card {
+        text-align: center;
+        padding-left: 20px;
+        border-left: none;
+        border-top: 5px solid var(--color-principal);
+    }
+    
+    .detalle-card i {
+        display: block;
+        margin: 0 0 10px 0;
+    }
+    
+    .detalle-card p {
+        padding-left: 0;
+    }
+}
